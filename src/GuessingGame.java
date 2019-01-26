@@ -15,10 +15,14 @@ public class GuessingGame {
 		int guess = user_input.nextInt();
 		
 		while(guesses >=0) {
-			if (guess == 0)
+			if (guess == 0) {
 				System.out.println("You lost!");
-			else if(guess == num)
+				break;
+			}
+			else if(guess == num) {
 				System.out.println("You are correct!");
+				break;
+			}
 			else if (guess > num)
 				System.out.println("It is less than your guess");
 			else if (guess < num)
